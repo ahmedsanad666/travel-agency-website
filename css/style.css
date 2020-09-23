@@ -1,0 +1,678 @@
+
+body{
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    column-rule-color: #ffffff;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+/* pre loader ................................. */
+.preloader{
+    position: relative;
+    border: 1px red solid;
+    background: #0562dc;
+    width: 100%;
+}
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    z-index: 9999;
+  }
+  
+  .plane {
+    animation: spin 3s linear infinite;
+    fill: #FFF;
+    transform-origin: 50% 50%;
+  }
+  @keyframes spin{
+      0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+ /* preloader ................. */
+/* start nav ..................... */
+nav{
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+}
+nav .container{
+    display: grid;
+grid-template-columns: 20% 30% auto;
+font-family: 'Open Sans', sans-serif;
+}
+.logo{
+display: flex;
+align-items: center;
+color: #EFD6AC;
+text-transform: uppercase;
+}
+.logo i{
+color: #C49D48;
+margin-right: 4px;
+}
+
+.contact-num{
+display: flex;
+align-items: center;
+color: #EFD6AC;
+padding: 0;
+}
+.contact-num li{
+    display: flex;
+    align-items: center;
+        width: 100%;
+height: 100%;
+}
+.contact-num li div{
+    overflow: hidden;
+width: 0;
+}
+.contact-num li i{ 
+    padding: 10px;
+        background: rgba(0,0,0,.2)	;
+        border-radius: 50% 50%;
+        margin-right: 10px;
+        margin:auto;
+cursor: pointer;
+}
+.navList{
+display: flex;
+justify-content: flex-end;
+align-items: center;
+padding-right: 20px;
+font-family: 'Noto Sans', sans-serif;}
+.navList li{
+    display: inline-block;
+    margin-right: 25px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+}
+.navList li a{
+    color: #ffffff;
+}
+/* end nav  ...................*/
+/* start header ....................../ */
+header{
+    background: url('../img/dubai-33972181_1920.png') fixed no-repeat 50% 50%;
+    background-size: cover;
+    position: relative;
+}
+header::after{
+    content: ' ';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 1;
+}
+header .container .h-content{
+    position: absolute;
+    top: 16%;
+    z-index:2;
+}
+.h-content p:first-child{
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+line-height:1.5;
+letter-spacing: 2px;
+font-size: 50px;
+margin: 10px;
+}
+.h-content p{
+color: #ffffff;
+line-height: 1.5;
+}
+.h-content button{
+    margin-top: 35px;
+width: 166px;
+height: 60px;
+border-radius: 25px;
+border-style: none;
+background:#e74c3c;
+outline-style: none;
+cursor: pointer;
+color: aliceblue;
+font-size: 25px;
+text-transform: capitalize;
+}
+.h-content button:hover{
+    background: aliceblue;
+    color: #e74c3c;
+    transition: 1s;
+}
+header .planee{
+    z-index: 5;
+    position: absolute;
+    opacity: .5;
+    top:16%;
+    left: 30%;
+    transform: rotate(-10deg);
+}
+header .planee img{
+    width:800px;
+}
+/* end header   */
+/* <!-- start landscape ........................ --> */
+.landScape{
+height: 500px;
+}
+.landScape .container{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    height: 100vh;
+}
+
+.landScape .focus{
+  margin-right: 30px;
+margin-top: 20px;
+}
+.landScape .focus h2{
+    color: rgb(192, 57, 43);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 60px 0 30px;
+}
+.focus p{
+    line-height: 1.5;
+    font-size: 20px;
+}
+.landScape .city{
+z-index: 6;
+margin-top: -200px;
+}
+
+.lightSlider li{
+    
+    border-radius: 20px;
+height: 512px;
+
+}
+.city #lightSlider img{
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;    
+    object-fit: cover; 
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 71, 87,.8);
+    border-radius: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:60px;
+    font-weight: bold;
+    color: #ffffff;
+    
+}
+.overlay{
+    visibility: hidden;
+  
+
+}
+.lightSlider li:hover .overlay{
+    visibility: visible;
+    animation: fade .8s;
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+/* <!-- end landscape................................ --> */
+/* <!-- start res.......................orts  --> */
+.resorts{
+    height: 600px;
+    background: url('../img/Group\ 175.png') no-repeat bottom fixed;
+    background-size: cover;
+}
+.resortContainer{
+    position: relative;
+    display: flex;
+    margin: auto;
+        width: fit-content;
+        
+}
+.resortSlider{
+   width: 328px !important;
+   margin-top: -100px;
+}
+
+.resorts .resortSlider .lSSlideOuter {
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+}
+.resorts .lSSlideWrapper {
+   width: 328px;
+    position: relative;
+
+}
+.resortSlider #lightSlider li{
+   width:328px !important;
+  
+   border-radius: 20px;
+}
+
+.resortSlider #lightSlider li img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+   
+}
+.resortInfo{
+    width: 600px;
+    padding: 50px;
+    background: #E2EAF0;
+    margin-top: -100px;
+    border-radius: 20px;
+}
+.resortInfo h1{
+    margin-bottom: 50px;
+}
+.resortInfo p{
+    line-height: 2;
+    text-align: start;
+}
+.resortInfo .icons{
+    display: flex;
+    justify-content: space-between;
+}
+.icons img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50% 50%;
+}
+/* ..........................<!-- end resorts --> */
+/* start location...................... */
+.location{
+    /* border: 1px red solid; */
+    /* height: 800px; */
+    display: flex;
+}
+.map{
+    margin: 5px 10px;
+    border: tomato 2px solid;
+width: fit-content;
+border-radius: 15px;
+
+}
+.map iframe{
+    border-radius: 15px;
+}
+.location2{
+position: relative;
+}
+.location2  .location-content{
+padding:30px 50px;
+}
+.location-content h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(39, 174, 96);
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+.location-content p{
+    line-height: 1.5;
+    text-align: justify;
+
+}
+
+.location-pic div{
+    width: 450px;
+    height: 400px;
+position: absolute;
+bottom: 0;
+border-radius: 10px;
+}
+.location-pic div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+.location-btn{
+position: absolute;
+right: 0;
+}
+.location-btn .btns{
+margin: auto;    
+text-align: center;
+}
+.btns button{
+    margin:50px 20px;
+    width: 150px;
+    height: 50px;
+    border-style: none;
+    outline: none;
+    cursor: pointer;
+    color: #2c3e50;
+    font-weight: bold;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+    text-transform: capitalize;
+    background: #ecf0f1;
+}
+.btns button i{
+    color: #27ae60;
+    margin: 5px;
+}
+.btns button:hover{
+color: #ffffff;
+background: #e74c3c;
+transition: 1s;
+}
+.location-btn p{
+    position: absolute;
+    top: 45%;
+    width: 350px;
+left: 50%;
+transform: translate(-50%,-50%);
+line-height: 1.5;
+}
+.location-btn .composs{
+    position: absolute;
+    bottom:70px;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 200px;
+    height: 50px;
+    border-style: none;
+    outline: none;
+    cursor: pointer;
+    background:#C49D48 ;
+border-radius: 10px;
+font-size: 20px;
+font-weight: bold;
+text-transform: capitalize;
+color: #ffffff;
+letter-spacing: 1px;
+}
+.location-btn .composs:hover{
+    color: #c0392b;
+    transition: .8s;
+}
+/* end location .................*/
+/* <!-- start destination ......................... --> */
+.destination{
+    /* border: 1px red solid; */
+    margin-top: 30px;
+   
+}
+
+.destination .intro{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+text-transform: capitalize;
+padding:20px;
+padding-bottom: 50px;
+background:rgba(189, 195, 199,.1) ;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+
+margin: auto;
+height: 200px;
+}
+.destination .intro h1{
+    color: #27ae60;
+    font-family: Arial, Helvetica, sans-serif;
+text-transform: capitalize;
+margin-bottom: 30px;
+
+}
+.destination .autoSlider li:first-child p{
+width: 100%;
+    margin: auto;
+    font-size:40px;
+    line-height: 1.5;
+    color: #c0392b;
+    font-weight: bold;
+
+}
+.destination  .autoSlider li:nth-child(2),
+.autoSlider li:nth-child(3),
+.autoSlider li:nth-child(4),
+.autoSlider li:last-child{
+    color: #16a085;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+.autoSlider li{
+    display: none;
+}
+.autoSlider .active{
+    display: block;
+}
+
+.destination-pics{
+    display: flex;
+    flex-wrap: wrap;
+  
+padding: 0 5px;
+}
+.destination-pics .column{
+flex: 1;
+width: auto;
+overflow: hidden;
+height: 100%;
+}
+
+.destination-pics  img{
+    height: 100%;
+width: 100%;
+object-fit: cover;
+margin:2px 5px;
+border-radius: 10px;
+cursor: pointer;
+/* filter: grayscale(1) brightness(1); */
+}
+.destination-pics img:hover{
+    filter: grayscale(0) brightness(1);
+}
+
+/* <!-- end destination /......................... --> */
+/* start ve  */
+.videos{
+    margin-top: 50px;
+margin-bottom: 500px;
+}
+.videos h1{
+    text-align: center;
+    margin: 30px ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:#c0392b ;
+}
+.videos .lSSlideWrapper {
+    max-width: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+.videos iframe{
+width: 100%;
+margin: 10px;
+border-radius: 20px;
+}
+/* end ve  */
+/* starat email */
+.email{
+    height: 450px;
+    background: url('../img//pexels-camila-cordeiro-4932864.jpg') fixed center no-repeat;
+  background-size: cover;
+    position: relative;
+}
+.email::after{
+    content:'';
+    position: absolute;
+    top: 0; bottom: 0;
+    right: 0; left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.email .emailContent{
+    z-index:9;
+color: #E2EAF0;
+position: absolute;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.emailContent h1{
+
+    margin: 80px 0 30px;
+}
+.emailContent p{
+    margin: 10px 0 30px;
+    color: aliceblue;
+}
+.emailContent .emailSubmit{
+    padding: 20px 0;   
+    display: flex;
+    align-items: center;
+}
+.emailSubmit input{
+    opacity: .8;
+
+}
+.emailSubmit input,
+.emailSubmit button{
+    width: 600px;
+    height: 55px;
+    border-radius: 15px;
+    padding: 10px;
+font-size: 25px;
+outline: none;
+color: #2c3e50;
+border-style: none;
+margin-top: 40px;
+}
+
+.emailSubmit button{
+     margin-left: 50px;
+    height:75px;
+width: 250px;
+font-size: 20px;
+background: #ffffff;
+color: #e74c3c;
+cursor: pointer;
+font-weight: bold;
+padding: 10px 20px;
+}
+.emailSubmit button:hover{
+    background-color: #e74c3c;
+    color: #ffffff;
+    transition: .8s;
+}
+.emailSubmit i{
+    margin: 7px;
+}
+
+.emailContent p:last-child,.emailContent a{
+    color: #e74c3c;
+font-size: 25px;
+    margin-top: 0;
+    font-weight: bold;
+    display: none;
+
+}
+.emailContent a{
+    color:#bdc3c7 ;
+}
+.emailContent a:hover{
+    color: #e74c3c;
+}
+/* end email */
+/* <!-- staart footer  --> */
+.footer{
+    position: relative;
+    border: 1px solid rgb(23, 27, 32);
+    height: 370px;
+    background: rgb(23, 27, 32);
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(to bottom, rgb(49, 58, 70)  0%, rgb(15, 16, 19) 100%);
+}
+.footer .footer-bar{
+    display: flex;
+margin-top: 50px;
+padding: 20px;
+}
+.footer .col{
+    flex: 25%;
+}
+.footer h2{
+    text-transform: capitalize;
+    color:  #EFD6AC;
+}
+.footer p{
+    padding-left: 10px;
+}
+.footer p, .footer ul{
+    color: #d0bdbd;
+    line-height: 1.5;
+    list-style: circle;
+}
+.footer a{
+    color: #d0bdbd;
+}
+.footer a:hover{
+    color:#eb4d4b ;
+    transition: .2s;
+}
+.footer .col i{
+    margin:15px;
+    
+}
+.copyright{
+    height: 60px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: #0b0d10;
+    color: #ffffff;
+}
+.copyright .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.copyright i{
+    margin-right:10px;
+    padding: 10px;
+}
+.copyright span{
+text-align: center;
+}
+.copyright i:hover{
+    transform: rotate(350deg);
+    transition: .7s;
+}
+/* <!-- end footer  --> */
